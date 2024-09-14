@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Informasi Pendidikan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sistem Informasi Pendidikan</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#discussion">Ruang Diskusi</a></li>
+          <li><a href="#file-management">Penyimpanan File</a></li>
+          <li><a href="#calendar">Kalender Acara</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="home">
+      <h1>Selamat Datang di Sistem Informasi Pendidikan</h1>
+      <h2>
+        Platform ini menyediakan ruang diskusi, penyimpanan file, dan kalender
+        acara untuk mendukung pembelajaran.
+      </h2>
+    </div>
+
+    <section id="discussion">
+      <h2>Ruang Diskusi Online</h2>
+      <div class="chatbox">
+        <div class="messages">
+          <!-- Pesan akan ditampilkan di sini -->
+          <p><strong>Guru:</strong> Selamat pagi, siswa!</p>
+          <p><strong>Siswa 1:</strong> Selamat pagi, Bu.</p>
+          <p><strong>Siswa 2:</strong> Siap untuk pelajaran hari ini!</p>
+        </div>
+        <input type="text" placeholder="Tulis pesan..." id="chat-input" />
+        <button type="button" onclick="sendMessage()">Kirim</button>
+      </div>
+    </section>
+
+    <section id="file-management">
+      <h2>Sistem Penyimpanan File Terpusat</h2>
+      <div class="file-upload">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          <label for="file">Pilih file:</label>
+          <input type="file" name="file" id="file" />
+          <input type="submit" value="Upload" />
+        </form>
+      </div>
+      <div class="file-list">
+        <h3>Daftar File yang Diunggah</h3>
+        <ul>
+          <li><a href="files/materi1.pdf">Materi Pelajaran 1</a></li>
+          <li><a href="files/tugas2.docx">Tugas 2</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="calendar">
+      <h2>Kalender Acara</h2>
+      <div class="calendar">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=en.indonesian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FJakarta"
+          style="border: 0"
+          width="300"
+          height="600"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Sistem Informasi Pendidikan. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
