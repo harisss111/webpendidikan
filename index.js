@@ -11,3 +11,15 @@ function sendMessage() {
     messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll ke bawah
   }
 }
+
+function uploadFile() {
+  const fileInput = document.getElementById("fileUpload");
+  const fileList = document.getElementById("fileList");
+
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const newFile = document.createElement("div");
+    newFile.textContent = `File: ${file.name}`;
+    fileList.appendChild(newFile);
+  }
+}
